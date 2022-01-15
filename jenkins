@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('downloadgit') {
+            steps {
+                git 'https://github.com/Naveen12101991/naveenrepo.git' 
+            }
+        }
+    }
+}
