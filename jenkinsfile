@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('downloadgit') {
             steps {
-                git 'https://github.com/Naveen12101991/naveenrepo.git' 
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Naveen12101991/naveenrepo.git']]])
             }
         }
     }
